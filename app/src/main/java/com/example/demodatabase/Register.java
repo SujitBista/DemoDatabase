@@ -28,6 +28,9 @@ public class Register extends AppCompatActivity {
         password = e_password.getText().toString();
         contact = e_contact.getText().toString();
         country = e_country.getText().toString();
+        String method = "register";
+        BackgroundTask backgroundTask = new BackgroundTask(this);
+        backgroundTask.execute(method,name,password,contact,country);
     }
 
 }
